@@ -1,7 +1,7 @@
 // script.js — Whisper Wall Frontend Logic
 
 // ─── Config ───────────────────────────────────────────────
-const API_BASE = "http://localhost:5000/api/confessions";
+const API_BASE = "https://whisperwall-81ls.onrender.com/api/confessions";
 
 // Auto-refresh every 30 seconds
 const REFRESH_INTERVAL = 30000;

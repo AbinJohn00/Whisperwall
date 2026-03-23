@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Confession — Whisper Wall</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Whisper<span class="accent">Wall</span></span>
+      </div>
+      <nav>
+        <a href="index.html" class="nav-link">Feed</a>
+        <a href="post.html" class="nav-link btn-confess active">+ Confess</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── POST PAGE CONTENT ──────────────────────────── -->
+  <main class="post-page">
+    <div class="post-container">
+      <div class="post-header">
+        <h1>Confess Anonymously</h1>
+        <p class="post-sub">No name. No account. Just your truth.</p>
+      </div>
+
+      <!-- Confession Form -->
+      <div class="post-form-card">
+        <!-- Category Selector -->
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <div class="category-pills" id="categorySelect">
+            <button class="pill active" data-cat="Other">Other</button>
+            <button class="pill" data-cat="Love">Love</button>
+            <button class="pill" data-cat="Study">Study</button>
+            <button class="pill" data-cat="Life">Life</button>
+            <button class="pill" data-cat="Work">Work</button>
+            <button class="pill" data-cat="Family">Family</button>
+            <button class="pill" data-cat="Secret">Secret</button>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="form-label" for="confessionText">Your Confession</label>
+          <textarea
+            id="confessionText"
+            class="confession-textarea"
+            placeholder="What's on your mind? Let it out..."
+            maxlength="300"
+          ></textarea>
+          <div class="char-counter">
+            <span id="charCount">0</span> / 300
+          </div>
+        </div>
+
+        <!-- Error message -->
+        <div class="form-error" id="formError"></div>
+
+        <!-- Submit Button -->
+        <button class="btn-submit" id="submitBtn">
+          <span class="btn-text">Post Confession</span>
+          <span class="btn-icon">→</span>
+        </button>
+
+        <!-- Anti-spam note -->
+        <p class="spam-note">⚡ Please wait 10 seconds between posts to prevent spam.</p>
+      </div>
+
+      <!-- Guidelines Card -->
+      <div class="guidelines-card">
+        <h3>◈ Guidelines</h3>
+        <ul>
+          <li>Keep it honest — this is your safe space</li>
+          <li>No hate speech or harassment</li>
+          <li>Maximum 300 characters per confession</li>
+          <li>Choose a category to help others find your confession</li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="back-link">← Back to Feed</a>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>Whisper Wall — No names. No judgment. Just truth.</p>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whisper Wall — Anonymous Confessions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Whisper<span class="accent">Wall</span></span>
+      </div>
+      <nav>
+        <a href="index.html" class="nav-link active">Feed</a>
+        <a href="post.html" class="nav-link btn-confess">+ Confess</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ───────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg-text" aria-hidden="true">SECRETS</div>
+    <h1 class="hero-title">Your secrets,<br/><em>no name attached.</em></h1>
+    <p class="hero-sub">An anonymous space to confess, vent, and be heard.</p>
+  </section>
+
+  <!-- ── CONTROLS ───────────────────────────────────── -->
+  <main class="main-content">
+    <div class="controls-bar">
+      <!-- Search -->
+      <div class="search-wrapper">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search confessions..."
+        />
+      </div>
+
+      <!-- Category Filter -->
+      <div class="category-pills" id="categoryFilter">
+        <button class="pill active" data-cat="All">All</button>
+        <button class="pill" data-cat="Love">Love</button>
+        <button class="pill" data-cat="Study">Study</button>
+        <button class="pill" data-cat="Life">Life</button>
+        <button class="pill" data-cat="Work">Work</button>
+        <button class="pill" data-cat="Family">Family</button>
+        <button class="pill" data-cat="Secret">Secret</button>
+        <button class="pill" data-cat="Other">Other</button>
+      </div>
+    </div>
+
+    <!-- ── MOST LIKED SECTION ──────────────────────── -->
+    <section class="top-section">
+      <h2 class="section-title"><span class="accent">◆</span> Most Liked</h2>
+      <div class="top-list" id="topList">
+        <div class="loading-shimmer"></div>
+        <div class="loading-shimmer"></div>
+        <div class="loading-shimmer"></div>
+      </div>
+    </section>
+
+    <!-- ── ALL CONFESSIONS ─────────────────────────── -->
+    <section class="feed-section">
+      <div class="feed-header">
+        <h2 class="section-title"><span class="accent">◆</span> Latest Confessions</h2>
+        <span class="live-dot" title="Auto-refreshing"></span>
+      </div>
+      <div class="confessions-grid" id="confessionsGrid">
+        <!-- Cards injected by JS -->
+        <div class="loading-shimmer card-shimmer"></div>
+        <div class="loading-shimmer card-shimmer"></div>
+        <div class="loading-shimmer card-shimmer"></div>
+      </div>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <p class="empty-icon">◌</p>
+        <p>No confessions found.</p>
+        <a href="post.html" class="btn-primary">Be the first to confess</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>Whisper Wall — No names. No judgment. Just truth.</p>
+  </footer>
+
+  <!-- ── TOAST NOTIFICATION ─────────────────────────── -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
